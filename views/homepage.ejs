@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet", type="text/css" href="/css/style.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to the sample node server</h1>
+        <div id="login_details">
+            <h3>Enter Login Details</h3>
+            <form id="login_form" method="POST", action="/login">
+                <label for="uname">Enter Username:</label>
+                <input type="text" id="uname" name="uname" placeholder="Enter Username" required/><br>
+                <label for="pswrd">Enter Password:</label>
+                <input type="password" id="pswrd" name="pswrd" placeholder="Enter Password" required/>
+                <ul>
+                    <% for (i in todos) {%>
+                        <li><%= todos[i].item %></li>
+                    <% } %>
+                </ul>
+                <!--<label for="dob">Enter D.O.B:</label>
+                <input type="date" id="dob" name="dob" placeholder="yyyy/mm/dd"/>
+                <label for="contact">Enter Contact  No.:</label>
+                <input type="number" id="contact" name="contact" placeholder="0123456789"/>
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" placeholder="someone@something.com"/>-->
+                <input type="submit" value="Login"/>
+            </form>
+        </div>
+    </body>
+</html>
