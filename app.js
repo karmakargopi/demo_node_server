@@ -9,6 +9,9 @@ app.use('/', express.static('./public'));
 controller(app);
 app.listen(process.env.PORT || port, (err) => {
     if(!err) {
-        console.log("Server Running At Port : ", port);
+        console.log("Server Running At Port# : ", port);
+    }
+    else {
+        console.log("Server Couldn't Run! Problem Occurred On Port# : ", port);
     }
 });
